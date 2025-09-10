@@ -12,4 +12,9 @@ public class TelaCompra extends JPanel {
 
 	}
 
+	public void updateWelcomeMessage(String currentUser) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

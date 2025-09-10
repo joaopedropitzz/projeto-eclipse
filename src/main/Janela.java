@@ -43,7 +43,7 @@ public class Janela extends JFrame {
         contentPane.setPreferredSize(new Dimension(500, 200));
         
         // 3. Instancia todas as telas, passando a referência deste JFrame.
-        telaCadastro = new TelaCadastro(this);
+        telaCadastro = new TelaCadastro();
         telaCompra = new TelaCompra(this);
         telaIdentificacao = new TelaIdentificacao(this);
         

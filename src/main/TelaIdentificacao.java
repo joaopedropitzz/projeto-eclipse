@@ -12,4 +12,9 @@ public class TelaIdentificacao extends JPanel {
 
 	}
 
+	public void setCurrentUsername(String currentUser) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
