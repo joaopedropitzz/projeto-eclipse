@@ -1,4 +1,5 @@
-package main;
+package view;
+
 import javax.swing.JPanel;
 
 public class TelaCompra extends JPanel {
@@ -10,11 +11,6 @@ public class TelaCompra extends JPanel {
 	 */
 	public TelaCompra() {
 
-	}
-
-	public void updateWelcomeMessage(String currentUser) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
