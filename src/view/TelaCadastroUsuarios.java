@@ -42,11 +42,11 @@ public class TelaCadastroUsuarios extends JPanel {
 		textFieldCPF.setBounds(166, 164, 86, 20);
 		add(textFieldCPF);
 		
-		JButton BotaoCadastrar = new JButton("Cadastrar");
+		BotaoCadastrar = new JButton("Cadastrar");
 		BotaoCadastrar.setBounds(163, 232, 89, 23);
 		add(BotaoCadastrar);
 		
-		JButton BotaoVoltar = new JButton("<-");
+		BotaoVoltar = new JButton("<-");
 		BotaoVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}

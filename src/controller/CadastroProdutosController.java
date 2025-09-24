@@ -26,18 +26,19 @@ public class CadastroProdutosController {
 		//Define o que será executado quando o botão 'Cadastrar' da TelaCadastro for clicado.
 		this.view.cadastrar(e -> {
 			String nome = view.getNome();
-			String formacao = view.getFormacao();
-			String area = view.getArea();
+			String preco = view.getPreco();
+			String descricao = view.getDescricao();
 
 			if(!nome.equals("") &&
-					!formacao.equals("") &&
-					!area.equals("")) {
+					!preco.equals("") &&
+					!descricao.equals("")) {
 
-				Candidato c = new Candidato(nome, formacao, area, false);
-				this.model.adicionar(c);
+				Produto p = new Produto(nome, preco, descricao);
+				this.model.adicionar(p);
 
 				this.view.limparFormulario();
 				this.view.exibirMensagem("Sucesso", "Candidato salvo!", 1);
+				
 			}
 			else {
 				this.view.exibirMensagem("Erro", "Preencha todos os campos!", 0);
@@ -45,17 +46,14 @@ public class CadastroProdutosController {
 		});
 
 		//Define o que será executado quando o botão 'Próximo' da TelaCadastro for clicado.
-		this.view.proximo(e -> {
-			if(model.listarTodos().size() > 0)
-				this.navegador.navegarPara("CONTRATACAO");
-			else
-				this.view.exibirMensagem("Erro", "Nenhum candidato cadastrado! Cadastre antes de avançar." , 0);
-		});
+		this.view.voltar(e -> {
+			
+			this.navegador.navegarPara("TelaLogin");
+		
+	});
 
 		//Define o que será executado quando o botão 'Cancelar' da TelaCadastro for clicado.
-		this.view.cancelar(e -> {
-			this.navegador.sair();
-		});
+		
 	}
 
 }
